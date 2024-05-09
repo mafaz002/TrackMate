@@ -1,33 +1,6 @@
 import { useState } from 'react';
-import styled from 'styled-components/native';
+import { Container, Title, Content, TextInput, FooterText } from './common';
 import Button from './button';
-
-const Container = styled.View`
-  flex: 1;
-  padding: 80px 25px 0px 25px;
-`;
-
-const Title = styled.Text`
-  font-size: 30px;
-  font-weight: bold;
-`;
-
-const Content = styled.Text`
-  font-size: 20px;
-  margin-top: ${(props) => (props.isSpace ? '20px' : '5px')};
-`;
-
-const RegisterText = styled.Text`
-  margin-top: 20px;
-  font-size: 12px;
-`;
-
-const TextInput = styled.TextInput`
-  border: 2px solid grey;
-  border-radius: 12px;
-  padding: 5px 15px 5px 15px;
-  margin-top: ${(props) => (props.isSpaceTop ? '50px' : '15px')};
-`;
 
 /**
 |--------------------------------------------------
@@ -63,7 +36,7 @@ const Login = () => {
       <Button style={{ backgroundColor: '#a58ef0' }} onPress={handlePress}>
         Sign in
       </Button>
-      <RegisterText>Don't have an account ? Register Now</RegisterText>
+      <FooterText>Don't have an account ? Register Now</FooterText>
     </Container>
   );
 };

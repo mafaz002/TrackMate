@@ -15,13 +15,6 @@ const Error = styled.Text`
   margin-top: 30px;
 `;
 
-/**
-|--------------------------------------------------
-| TODO:
-| add password validation support
-| add hyperlink support for login text
-|--------------------------------------------------
-*/
 const Registration = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -86,7 +79,10 @@ const Registration = () => {
         Sign Up
       </Button>
       <FooterText>
-        Already have an account ? <Link href={'./'}>Login</Link>
+        Already have an account ?{' '}
+        <Link href={'./'} style={{ color: '#02CCFE' }}>
+          Login
+        </Link>
       </FooterText>
     </Container>
   );

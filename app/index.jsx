@@ -14,7 +14,6 @@ import Button from '../components/button';
 | TODO:
 | . Fix React Devtools Debugging
 | . Fix font-weight: bold issue
-| . Add hyperlink support for RegisterNow, once the tab is inplace 
 |--------------------------------------------------
 */
 const Login = () => {
@@ -44,7 +43,10 @@ const Login = () => {
         Sign in
       </Button>
       <FooterText>
-        Don't have an account ? <Link href={'registration'}>Register Now</Link>
+        Don't have an account ?{' '}
+        <Link href={'registration'} style={{ color: '#02CCFE' }}>
+          Register Now
+        </Link>
       </FooterText>
     </Container>
   );

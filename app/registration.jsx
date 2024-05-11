@@ -1,7 +1,14 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'expo-router';
 import styled from 'styled-components/native';
-import { Container, Title, Content, TextInput, FooterText } from './common';
-import Button from './button';
+import {
+  Container,
+  Title,
+  Content,
+  TextInput,
+  FooterText,
+} from '../components/common';
+import Button from '../components/button';
 
 const Error = styled.Text`
   color: red;
@@ -78,7 +85,9 @@ const Registration = () => {
       >
         Sign Up
       </Button>
-      <FooterText>Already have an account ? Login</FooterText>
+      <FooterText>
+        Already have an account ? <Link href={'./'}>Login</Link>
+      </FooterText>
     </Container>
   );
 };

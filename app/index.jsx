@@ -1,6 +1,13 @@
 import { useState } from 'react';
-import { Container, Title, Content, TextInput, FooterText } from './common';
-import Button from './button';
+import { Link } from 'expo-router';
+import {
+  Container,
+  Title,
+  Content,
+  TextInput,
+  FooterText,
+} from '../components/common';
+import Button from '../components/button';
 
 /**
 |--------------------------------------------------
@@ -36,7 +43,9 @@ const Login = () => {
       <Button style={{ backgroundColor: '#a58ef0' }} onPress={handlePress}>
         Sign in
       </Button>
-      <FooterText>Don't have an account ? Register Now</FooterText>
+      <FooterText>
+        Don't have an account ? <Link href={'registration'}>Register Now</Link>
+      </FooterText>
     </Container>
   );
 };
